@@ -1,1 +1,0 @@
-# furkanhucuptan.github.io
