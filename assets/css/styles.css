@@ -127,7 +127,14 @@ body.dark-theme {
 .dark-theme::-webkit-scrollbar-thumb:hover {
   background-color: hsl(var(--hue), 8%, 32%);
 }
+/*Yeni ek*/
+.dark-theme .about_hello {
+  background-color: var(--container-color);
+}
 
+.dark-theme .about_paragraph {
+  background-color: var(--container-color);
+}
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 968px;
@@ -314,6 +321,41 @@ body.dark-theme {
 .filters__button:hover {
   background-color: var(--body-color);
 }
+
+/*=============== ABOUT ===============*/
+.about__content{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+.about_main {
+  display: flex;
+}
+
+.about_photo img {
+  max-width: 225px;
+  border-radius:  15px;
+}
+
+.about_hello {
+  padding-left: 10px;
+  background-color: var(--text-color-lighten);
+  border-radius:  5px;
+  margin-left: 10px;
+} 
+
+.about_paragraph {
+  max-width:  380px;
+  min-width: 100px;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: var(--text-color-lighten);
+  border-radius:  5px;
+
+}
+
 
 /*=============== PROJECTS ===============*/
 .projects__card {
@@ -550,19 +592,6 @@ body.dark-theme {
   .footer__copy {
     margin: 4.5rem 0 2.5rem;
   }
-}
-
-
-.about__content{
-  display: flex;
-  justify-content: center;
-}
-
-.about-paragraph {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  max-width:  500px;
 }
 
 /* CONTACT AREA*/
