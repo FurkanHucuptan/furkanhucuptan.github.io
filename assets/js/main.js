@@ -1,3 +1,21 @@
+/*============ TEXT ANIMATION ============= */
+const text = document.querySelector(".sec-text");
+
+const textLoad = () => {
+    setTimeout(() => {
+        text.textContent = "Business Analyst";
+    }, 0);
+    setTimeout(() => {
+        text.textContent = "Business Developer";
+    }, 4000);
+    setTimeout(() => {
+        text.textContent = "Software Developer";
+    }, 8000); //1s = 1000 milliseconds
+}
+
+textLoad();
+setInterval(textLoad, 12000);
+
 /*=============== FILTERS TABS ===============*/
 const tabs = document.querySelectorAll('[data-target]'),
       tabContents = document.querySelectorAll('[data-content]')
@@ -104,4 +122,5 @@ const sendEmail = (e) =>{
     }
 }
 contactForm.addEventListener('submit', sendEmail)
+
 
