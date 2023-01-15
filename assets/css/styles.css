@@ -127,7 +127,7 @@ body.dark-theme {
 .dark-theme::-webkit-scrollbar-thumb:hover {
   background-color: hsl(var(--hue), 8%, 32%);
 }
-/*Yeni eklenenler*/
+/*Yeni ek*/
 .dark-theme .about_hello {
   background-color: var(--container-color);
 }
@@ -261,6 +261,7 @@ body.dark-theme {
   color: #fff;
   padding: 1.15rem 1.5rem;
   border-radius: .5rem;
+  height: 50px;
   transition: .3s;
   box-shadow: 0 8px 24px hsla(var(--hue), var(--sat), var(--lig), .25);
 }
@@ -353,7 +354,8 @@ body.dark-theme {
   margin-left: 10px;
   background-color: var(--text-color-lighten);
   border-radius:  5px;
-
+  font-size: var(--small-font-size);
+  font-family: var(--body-font);
 }
 
 
@@ -749,4 +751,59 @@ body.dark-theme {
 
 .color-blue{
   color: blue;
+}
+
+
+/*============ TEXT ANIMATION ============= */
+
+
+.profile__profession{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.profile-midguy{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.profile-details{
+  overflow: hidden;
+}
+
+.profile-details .text{
+  position: relative;
+  color: #4070F4;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* passive */
+.profile-details .text.first-text{
+  color: var(--text-color);
+}
+
+.text.sec-text:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--body-color);
+  border-left: 2px solid #4070F4;
+  animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate{
+  40%, 60%{
+      left: calc(100% + 3px);
+  }
+  100%{
+      left: 0%;
+  }
 }
