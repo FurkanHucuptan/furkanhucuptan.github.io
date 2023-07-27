@@ -3,10 +3,10 @@ const text = document.querySelector(".sec-text");
 
 const textLoad = () => {
     setTimeout(() => {
-        text.textContent = "Business Analyst";
+        text.textContent = "Product Manager";
     }, 0);
     setTimeout(() => {
-        text.textContent = "Business Developer";
+        text.textContent = "Business Analyst";
     }, 4000);
     setTimeout(() => {
         text.textContent = "Software Developer";
