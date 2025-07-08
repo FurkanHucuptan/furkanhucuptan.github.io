@@ -330,8 +330,12 @@ body.dark-theme {
   margin: auto;
   justify-content: center;
 }
+
 .about_main {
   display: flex;
+  flex-direction: column;
+  align-items: center; /* Optional: centers items horizontally */
+  gap: 1rem; /* Adds spacing between photo and text */
 }
 
 .about_photo img {
