@@ -333,14 +333,15 @@ body.dark-theme {
 
 .about_main {
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Optional: centers items horizontally */
-  gap: 1rem; /* Adds spacing between photo and text */
+  align-items: flex-start; /* Align photo and text at the top */
+  gap: 2rem;
+  flex-wrap: wrap; /* Enables wrapping on small screens */
 }
 
 .about_photo img {
-  max-width: 225px;
-  border-radius:  15px;
+  width: 280px; /* Slightly larger than before */
+  max-width: 100%;
+  border-radius: 15px;
 }
 
 .about_hello {
@@ -532,7 +533,7 @@ body.dark-theme {
   }
 }
 
-@media screen and (min-width: 776px) {
+@media screen and (min-width: 778px) {
   .projects__content,
   .skills__content {
     grid-template-columns: repeat(2, 332px);
@@ -541,6 +542,20 @@ body.dark-theme {
   .skills__content {
     justify-content: center;
     column-gap: 3rem;
+  }
+  
+    .about_main {
+    flex-direction: column-reverse; /* Put text above image on small screens */
+    align-items: center;
+  }
+
+  .about_photo img {
+    width: 100%;
+    max-width: 320px; /* Optional max size on mobile */
+  }
+
+  .about_paragraph {
+    text-align: center; /* Optional: improves mobile readability */
   }
 }
 
